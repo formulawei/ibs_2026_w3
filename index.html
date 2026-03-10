@@ -1,0 +1,1243 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Language" content="zh-Hant">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IBS 國際企業經營策略 International Business Strategy｜W3 Opportunity Recognition（中英對照｜本機作答）</title>
+
+  <style>
+    /* =========================
+       Design system (NTU palette)
+       ========================= */
+    :root{
+      --ntu-blue:#002B5C;
+      --ntu-blue-2:#01356F;
+      --ntu-gold:#C9A227;
+
+      --bg:#F6F8FC;
+      --surface:#FFFFFF;
+      --surface-2:#FBFCFF;
+
+      --text:#0B1220;
+      --muted:#475569;
+      --muted-2:#64748B;
+
+      --border:#D7DEE9;
+      --border-strong:#C7D0DF;
+
+      --shadow: 0 10px 28px rgba(2, 6, 23, .10);
+      --radius: 16px;
+      --radius-sm: 12px;
+
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: "Noto Sans TC","Source Han Sans TC","PingFang TC","Microsoft JhengHei","Heiti TC","Noto Sans CJK TC", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+      --fs-xxl: 26px;
+      --fs-xl: 20px;
+      --fs-lg: 18px;
+      --fs-md: 15.5px;
+      --fs-sm: 13.5px;
+
+      --lh: 1.7;
+      --lh-tight: 1.45;
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font-family: var(--sans);
+      font-size: var(--fs-lg);
+      line-height: var(--lh);
+      color: var(--text);
+      background:
+        radial-gradient(900px 480px at 12% 0%, rgba(0,43,92,.08), transparent 60%),
+        radial-gradient(900px 480px at 95% 6%, rgba(201,162,39,.12), transparent 60%),
+        var(--bg);
+    }
+
+    /* =========================
+       Header
+       ========================= */
+    header{
+      position: sticky; top:0; z-index:10;
+      background: linear-gradient(90deg, rgba(0,43,92,.98), rgba(0,43,92,.92));
+      color:#fff;
+      border-bottom: 4px solid var(--ntu-gold);
+    }
+
+    .wrap{ max-width: 1500px; margin:0 auto; padding: 14px 18px; }
+    .topRow{ display:flex; gap:14px; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; }
+
+    .title{
+      margin:0;
+      font-size: 20px;
+      letter-spacing:.2px;
+      line-height: 1.35;
+    }
+
+    .sub{
+      margin-top: 6px;
+      font-size: var(--fs-md);
+      opacity:.95;
+      line-height: 1.6;
+    }
+
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      font-size: var(--fs-sm);
+      white-space: nowrap;
+    }
+
+    .btnRow{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .btn{
+      appearance:none;
+      border: 1px solid rgba(255,255,255,.25);
+      background: rgba(255,255,255,.10);
+      color:#fff;
+      border-radius: 12px;
+      padding: 9px 12px;
+      cursor:pointer;
+      font-size: var(--fs-md);
+      transition: .12s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.16); }
+    .btn.primary{ border-color: rgba(201,162,39,.65); background: rgba(201,162,39,.18); }
+    .btn.ghost{ border-color: rgba(255,255,255,.25); background: rgba(255,255,255,.08); }
+
+    /* =========================
+       Layout
+       ========================= */
+    main{ padding: 14px 0 44px; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:16px;
+      align-items:start;
+    }
+    @media (max-width: 1100px){
+      .grid{ grid-template-columns:1fr; }
+    }
+
+    .card{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 14px;
+    }
+
+    .card h2{
+      margin:0 0 10px;
+      font-size: 16px;
+      color: var(--ntu-blue);
+      display:flex; align-items:center; gap:10px;
+      letter-spacing:.2px;
+    }
+
+    .muted{ color: var(--muted); font-size: var(--fs-md); }
+    .tiny{ color: var(--muted-2); font-size: var(--fs-sm); }
+    .hr{ height:1px; background: var(--border); margin: 12px 0; }
+
+    /* =========================
+       Bilingual rendering
+       ========================= */
+    .bi .zh{ font-weight: 650; color: var(--text); }
+    .bi .en{
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: var(--fs-md);
+      font-weight: 520;
+    }
+    .bi.compact .en{ margin-top: 4px; font-size: var(--fs-sm); color: var(--muted-2); }
+
+    /* ZH-only mode */
+    body.zhOnly .en{ display:none !important; }
+
+    /* =========================
+       Presenter area
+       ========================= */
+    .segRow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-bottom: 6px;
+    }
+    .segTag{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #F8FAFC;
+      font-size: var(--fs-sm);
+      color: var(--muted);
+    }
+    .segTag strong{ color: var(--ntu-blue); font-family: var(--mono); }
+    .timeChip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(0,43,92,.05);
+      font-size: var(--fs-sm);
+      color: var(--ntu-blue-2);
+      font-family: var(--mono);
+    }
+
+    .segTitle{
+      margin: 6px 0 8px;
+      font-size: var(--fs-xl);
+      line-height: var(--lh-tight);
+      color: var(--text);
+    }
+
+    .miniLecture{
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      border-radius: 14px;
+      padding: 12px 12px;
+    }
+    .miniLecture .line{
+      padding: 8px 10px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.65);
+      border: 1px solid rgba(215,222,233,.55);
+      margin-top: 10px;
+    }
+    .miniLecture .line:first-child{ margin-top: 0; }
+
+    .bigQ{
+      margin: 12px 0;
+      padding: 14px 14px;
+      border-left: 6px solid var(--ntu-gold);
+      background: rgba(201,162,39,.12);
+      border-radius: 14px;
+      font-size: var(--fs-xxl);
+      line-height: 1.35;
+    }
+    .bigQ .en{ font-size: 18px; }
+
+    .taskHeader{
+      display:flex;
+      justify-content:space-between;
+      align-items:baseline;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top: 6px;
+    }
+    .taskHeader strong{ color: var(--ntu-blue); }
+    .tasks{
+      margin: 8px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .tasks li{
+      margin: 10px 0;
+      padding: 10px 10px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fff;
+    }
+    .tasks li .zh{ font-weight: 650; }
+    .tasks li .en{ margin-top: 4px; }
+
+    .callout{
+      border: 1px solid rgba(0,43,92,.20);
+      background: rgba(0,43,92,.05);
+      border-radius: 14px;
+      padding: 12px;
+    }
+    .callout strong{ color: var(--ntu-blue); }
+    .callout ul{ margin: 8px 0 0; padding-left: 18px; }
+    .callout li{ margin: 6px 0; }
+
+    .actionRow{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:10px; }
+    .sbtn{
+      appearance:none;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--ntu-blue);
+      border-radius: 12px;
+      padding: 9px 12px;
+      cursor:pointer;
+      font-size: var(--fs-md);
+      transition:.12s ease;
+    }
+    .sbtn:hover{ transform: translateY(-1px); }
+    .sbtn.primary{ border-color: rgba(0,43,92,.35); background: rgba(0,43,92,.06); }
+    .sbtn.warn{ border-color: rgba(201,162,39,.60); background: rgba(201,162,39,.12); color: #5A4600; }
+
+    /* =========================
+       Right column: polls + agenda
+       ========================= */
+    .pollGrid{ display:grid; grid-template-columns:1fr; gap:12px; }
+    .pollBox{
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px;
+      background: #fff;
+    }
+    .pollBox h3{
+      margin:0 0 6px;
+      font-size: 15.5px;
+      color: var(--ntu-blue);
+      letter-spacing:.2px;
+    }
+    .pollDesc{ color: var(--muted); font-size: var(--fs-md); line-height: 1.6; }
+    .pollBtns{ display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
+    .pbtn{
+      appearance:none;
+      border: 1px solid var(--border);
+      background: #F8FAFC;
+      color: var(--text);
+      border-radius: 12px;
+      padding: 8px 10px;
+      cursor:pointer;
+      font-size: var(--fs-sm);
+      transition:.12s ease;
+    }
+    .pbtn:hover{ border-color: rgba(0,43,92,.35); transform: translateY(-1px); }
+    .pollResult{
+      margin-top:10px;
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--muted);
+      background: #F8FAFC;
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      padding: 8px 10px;
+      line-height:1.55;
+      white-space: pre-wrap;
+    }
+    .code{
+      font-family: var(--mono);
+      font-size: 13px;
+      padding: 2px 6px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    .agendaItem{
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fff;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: .12s ease;
+    }
+    .agendaItem:hover{ transform: translateY(-1px); }
+    .agendaItem.active{
+      border-color: rgba(0,43,92,.35);
+      background: rgba(0,43,92,.05);
+    }
+    .agendaTop{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .agendaTop .name{ font-size: var(--fs-md); }
+    .agendaTop .mins{ font-size: var(--fs-sm); color: var(--muted); font-family: var(--mono); }
+    .agendaItem .q{ margin-top: 8px; font-size: var(--fs-md); color: var(--muted); line-height: 1.6; }
+
+    /* =========================
+       Student worksheet (local-only)
+       ========================= */
+    .studentShell{ max-width: 1020px; margin: 0 auto; padding: 14px 18px; }
+    .studentCard{
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 14px;
+    }
+    .studentGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    @media (max-width: 820px){ .studentGrid{ grid-template-columns:1fr; } }
+
+    .voteBtn{
+      appearance:none;
+      border: 1px solid var(--border);
+      background: #F8FAFC;
+      color: var(--text);
+      border-radius: 14px;
+      padding: 12px 12px;
+      cursor: pointer;
+      text-align: left;
+      transition: .12s ease;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+    .voteBtn:hover{ border-color: rgba(0,43,92,.35); transform: translateY(-1px); }
+    .voteBtn.selected{
+      border-color: rgba(201,162,39,.90);
+      background: rgba(201,162,39,.14);
+    }
+    .voteBtn .hint{
+      margin-top: 6px;
+      font-size: var(--fs-sm);
+      color: var(--muted);
+    }
+
+    textarea.reply{
+      width:100%;
+      min-height:160px;
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding: 12px;
+      font-size: 15.5px;
+      background:#fff;
+      outline:none;
+      line-height: 1.7;
+      resize: vertical;
+    }
+    textarea.reply:focus{ border-color: rgba(0,43,92,.35); box-shadow: 0 0 0 4px rgba(0,43,92,.06); }
+
+    .toast{
+      position: fixed; right: 16px; bottom: 16px; z-index: 99;
+      background: #0B1220;
+      color:#fff;
+      border-left: 6px solid var(--ntu-gold);
+      border-radius: 14px;
+      padding: 10px 12px;
+      box-shadow: var(--shadow);
+      font-size: var(--fs-md);
+      max-width: 520px;
+      display:none;
+      line-height: 1.5;
+    }
+
+    /* Print: student worksheet as a clean handout */
+    @media print{
+      header, #projectionMain { display:none !important; }
+      #studentMain { display:block !important; }
+      body{ background:#fff; }
+      .studentCard{ box-shadow:none; }
+      .toast{ display:none !important; }
+    }
+  
+    /* =========================
+       Projection readability (index5 layout-compatible)
+       ========================= */
+    @media (min-width: 1101px){
+      /* 右欄固定，討論時不易滑走 */
+      aside.card{
+        position: sticky;
+        top: 88px; /* header height buffer */
+        align-self: start;
+      }
+    }
+
+    /* 投影端：左欄更好讀 */
+    #projectionMain .card h2{
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+    #projectionMain .segTitle{
+      font-size: 22px;
+      margin: 8px 0 10px;
+    }
+    #projectionMain .miniLecture{
+      padding: 14px;
+    }
+    #projectionMain .miniLecture .line{
+      padding: 10px 12px;
+      margin-top: 12px;
+    }
+    #projectionMain .bigQ{
+      font-size: 30px;
+      padding: 16px 16px;
+      margin: 14px 0;
+    }
+    #projectionMain .tasks li{
+      padding: 12px 12px;
+      margin: 12px 0;
+    }
+
+    /* 右欄：投票與導覽更易讀 */
+    #projectionMain aside.card h2{
+      font-size: 18px;
+    }
+    #projectionMain .pollBox h3{
+      font-size: 16.5px;
+      margin-bottom: 8px;
+    }
+    #projectionMain .pollDesc{
+      font-size: 15.5px;
+      line-height: 1.7;
+    }
+    #projectionMain .pbtn{
+      padding: 10px 12px;
+      font-size: 14px;
+      border-radius: 14px;
+    }
+    #projectionMain .pollResult{
+      font-size: 13.5px;
+      padding: 10px 12px;
+      border-radius: 14px;
+    }
+    #projectionMain .agendaItem{
+      padding: 14px;
+      margin-top: 12px;
+    }
+    #projectionMain .agendaTop .name{
+      font-size: 15.5px;
+    }
+    #projectionMain .agendaItem .q{
+      font-size: 15.5px;
+    }
+
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="wrap">
+    <div class="topRow">
+      <div>
+        <h1 class="title">IBS 國際企業經營策略 International Business Strategy｜W3 Opportunity Recognition（中英對照｜本機作答）</h1>
+        <div class="sub">
+          <span class="badge">Case：下町火箭 S1 Ep3–4 / Shitamachi Rocket S1 Ep3–4</span>
+          <span class="badge">Topics：Opportunity Recognition × Effectuation × Strategy Memo × Five Forces + Complementors × Taiwan Case</span><br/>
+          <span class="badge">檔名簡化版 / Easy-download filename：<code style="font-family:var(--mono); background:rgba(255,255,255,.12); padding:2px 6px; border-radius:8px;">ibs_w3.html</code></span><br/>
+          <span class="badge">Student worksheet：local-only（本機儲存、不回傳）</span>
+          <span class="badge">Projection polls：manual（老師手動統計）</span>
+        </div>
+      </div>
+      <div class="btnRow">
+        <button class="btn primary" id="btnPrev">上一段 / Prev</button>
+        <button class="btn primary" id="btnNext">下一段 / Next</button>
+        <button class="btn ghost" id="btnLang">顯示：中英 / Show: ZH+EN</button>
+        <button class="btn ghost" id="btnOpenStudent">學生工作紙 / Student</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- =========================
+     Projection view
+     ========================= -->
+<main id="projectionMain">
+  <div class="wrap grid">
+
+    <section class="card">
+      <h2>① 本段講解 → 討論引導 / Mini-lecture → Discussion</h2>
+
+      <div class="segRow">
+        <div class="segTag" id="segTag"><strong>S0</strong> Segment</div>
+        <div class="timeChip" id="segTime">— min</div>
+      </div>
+
+      <div class="segTitle" id="segTitle">—</div>
+
+      <div class="miniLecture" id="miniLecture">—</div>
+
+      <div class="bigQ" id="bigQ">—</div>
+
+      <div class="taskHeader">
+        <strong>本段任務（全班/分組）/ Tasks</strong>
+        <span class="tiny">建議句型：概念 → 劇情證據 → 推論 / Concept → Evidence → Inference</span>
+      </div>
+
+      <ul class="tasks" id="tasks"></ul>
+
+      <div class="hr"></div>
+
+      <div class="actionRow">
+        <button class="sbtn primary" id="btnGoStart">回到第一段 / Back to start</button>
+        <button class="sbtn warn" id="btnResetPolls">重設投影端票數 / Reset projection polls</button>
+      </div>
+
+      <div class="hr"></div>
+
+      <div class="callout tiny">
+        <strong>教室互動規則 / Interaction rule</strong>
+        <ul>
+          <li><span class="zh">先做判斷，再套理論：先回答 memo 問題，再說明你用哪一套理論。</span><span class="en">Judge first, then apply theory: answer the memo question before naming the framework.</span></li>
+          <li><span class="zh">區分三件事：發現機會、塑造機會、保衛機會。</span><span class="en">Keep three activities separate: recognizing, shaping, and defending an opportunity.</span></li>
+          <li><span class="zh">任何主張都要說清楚：理論概念、劇情證據、策略含意。</span><span class="en">Every claim must state: theory concept, episode evidence, and strategic implication.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <aside class="card">
+      <h2>② 段落導覽＋投影端票數 / Agenda + Projection polls</h2>
+
+      <div class="pollGrid">
+
+        <div class="pollBox">
+          <h3>投票 A（老師手動）/ Poll A (manual)：NASA Valve 機會的初步分類</h3>
+          <div class="pollDesc">
+            <span class="zh">問法：此刻你最傾向把 memo 問題怎麼答？</span>
+            <span class="en">Question: how would you classify the NASA valve opportunity right now?</span>
+          </div>
+          <div class="pollBtns">
+            <button class="pbtn" data-poll="A" data-opt="Value-based strategy">Value-based</button>
+            <button class="pbtn" data-poll="A" data-opt="Competition-based strategy">Competition-based</button>
+            <button class="pbtn" data-poll="A" data-opt="Hybrid / staged">Hybrid / staged</button>
+            <button class="pbtn" data-poll="A" data-opt="Not enough information">Not enough information</button>
+          </div>
+          <div class="pollResult">Results：<span id="pollA">（尚無 / none）</span></div>
+        </div>
+
+        <div class="pollBox">
+          <h3>投票 B（老師手動）/ Poll B (manual)：最能解釋本案機會辨識的理論鏡頭</h3>
+          <div class="pollDesc">
+            <span class="zh">問法：哪一套理論最能抓住 Ep3–4 的「機會是怎麼出現的」？</span>
+            <span class="en">Question: which lens best captures how the opportunity emerges in Episodes 3–4?</span>
+          </div>
+          <div class="pollBtns">
+            <button class="pbtn" data-poll="B" data-opt="Effectuation / means-driven">Effectuation</button>
+            <button class="pbtn" data-poll="B" data-opt="HBS opportunity shaping">HBS shaping</button>
+            <button class="pbtn" data-poll="B" data-opt="Five Forces + complementors">Five Forces + complementors</button>
+            <button class="pbtn" data-poll="B" data-opt="Market imperfections / value creation">Market imperfections</button>
+          </div>
+          <div class="pollResult">Results：<span id="pollB">（尚無 / none）</span></div>
+        </div>
+
+        <div class="pollBox">
+          <h3>學生工作紙連結 / Student worksheet link</h3>
+          <div class="tiny">
+            <span class="zh">同一網址加上</span> <span class="code">?view=student</span>
+            <span class="zh">，或點右上「學生工作紙」。</span><br/>
+            <span class="en">Use the same URL with</span> <span class="code">?view=student</span><span class="en">, or click “Student”.</span>
+          </div>
+          <div class="pollResult" id="studentLinkBox">(loading…)</div>
+        </div>
+
+      </div>
+
+      <div class="hr"></div>
+
+      <div class="muted"><strong>段落導覽（點選跳轉）/ Segments (click to jump)</strong></div>
+      <div id="agenda"></div>
+    </aside>
+
+  </div>
+</main>
+
+<!-- =========================
+     Student worksheet view (local-only)
+     ========================= -->
+<main id="studentMain" style="display:none">
+  <div class="studentShell">
+    <div class="studentCard">
+      <h2 style="margin:0 0 8px; color:var(--ntu-blue)">IBS W3 Opportunity Recognition｜學生個人工作紙（local-only（本機儲存、不回傳）） / Student worksheet</h2>
+
+      <div class="callout tiny">
+        <strong>怎麼用 / How to use</strong><br/>
+        <span class="zh">你的投票與文字只會保存在你手機。請先做判斷，再用理論回答：這是什麼機會、如何被辨識、如何變得可持續。</span>
+        <span class="en">Your votes and notes stay on your phone. Judge first, then use theory: what kind of opportunity it is, how it is recognized, and how it becomes sustainable.</span>
+      </div>
+
+      <div class="hr"></div>
+
+      <div class="muted"><strong>Poll A：NASA Valve 機會的分類 / How would you classify the NASA valve opportunity?</strong></div>
+      <div class="studentGrid" id="studentPollA"></div>
+
+      <div class="hr"></div>
+
+      <div class="muted"><strong>Poll B：最能解釋本案的理論鏡頭 / Which theory lens explains the case best?</strong></div>
+      <div class="studentGrid" id="studentPollB"></div>
+
+      <div class="hr"></div>
+
+      <div class="muted"><strong>文字回覆 / Notes（建議模板）</strong></div>
+      <div class="tiny" style="margin-top:6px">
+        <span class="zh">模板：我的分類是＿＿＿。我使用的理論是＿＿＿。劇情證據是＿＿＿。因此它對長期可持續性的含意是＿＿＿。</span>
+        <span class="en">Template: My classification is ____. The lens I use is ____. Evidence from the episode is ____. Therefore the implication for long-run sustainability is ____.</span>
+      </div>
+
+      <textarea class="reply" id="studentReply" placeholder="我的分類是…
+我使用的理論：
+劇情證據：
+對 long-term sustainability 的推論：
+（可選）我會如何寫成 3 句 memo："></textarea>
+
+      <div class="actionRow">
+        <button class="sbtn primary" id="btnSaveStudent">儲存到手機 / Save</button>
+        <button class="sbtn" id="btnCopy">複製（貼到 LMS/群組）/ Copy</button>
+        <button class="sbtn warn" id="btnClearStudent">清空（只清你自己）/ Clear</button>
+        <button class="sbtn" id="btnBackProjection">回投影畫面 / Back</button>
+      </div>
+
+      <div class="tiny" id="studentStatus" style="margin-top:10px">—</div>
+    </div>
+  </div>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  /* ========= helpers ========= */
+  const $ = (sel)=>document.querySelector(sel);
+  const $$ = (sel)=>Array.from(document.querySelectorAll(sel));
+  const toast = (msg)=>{
+    const t=$("#toast");
+    t.textContent=msg;
+    t.style.display="block";
+    clearTimeout(toast._timer);
+    toast._timer=setTimeout(()=>t.style.display="none",2200);
+  };
+
+  /* ========= language toggle ========= */
+  let showBilingual = true;
+  function setLangUI(){
+    document.body.classList.toggle("zhOnly", !showBilingual);
+    $("#btnLang").textContent = showBilingual ? "顯示：中英 / Show: ZH+EN" : "顯示：中文 / Show: ZH only";
+  }
+  $("#btnLang").addEventListener("click", ()=>{
+    showBilingual = !showBilingual;
+    setLangUI();
+    renderAll();
+    persistProjection();
+  });
+
+  /* ========= segments (text refined; RDT uses 著力點) ========= */
+  const segments = [
+    {
+      key:"S0", mins:10,
+      title_zh:"開場：從 strategy memo 進入「機會辨識」",
+      title_en:"Kickoff: entering opportunity recognition through the strategy memo",
+      mini_zh:[
+        "本節起點不是『NASA Valve 很酷』，而是：這到底是一個什麼型態的機會？",
+        "先抓主問題：NASA Valve opportunity 比較像 value-based strategy，還是 competition-based strategy？這個判斷會影響長期可持續性。"
+      ],
+      mini_en:[
+        "Our starting point is not simply that the NASA valve is impressive, but what type of opportunity it is.",
+        "Main question: Is the NASA valve opportunity better understood as value-based strategy or competition-based strategy, and what does that imply for long-run sustainability?"
+      ],
+      bigQ_zh:"若你是佃製作所經營團隊，此刻你會把 NASA Valve 視為『創造新價值』，還是『打贏既有競爭』？",
+      bigQ_en:"If you were Tsukuda’s team, would you frame the NASA valve as creating new value or beating existing rivals?",
+      tasks_zh:[
+        "先做 Poll A：你目前的直覺分類是什麼？",
+        "用一句話說明：你判斷的關鍵依據是需求、技術、競爭、還是關係網絡？"
+      ],
+      tasks_en:[
+        "Do Poll A first: what is your current classification?",
+        "Explain in one sentence whether your judgment rests mainly on demand, technology, competition, or stakeholder relationships."
+      ]
+    },
+    {
+      key:"T1", mins:15,
+      title_zh:"理論1｜Sarasvathy：機會不只是被發現，也可能被做出來",
+      title_en:"Theory 1 | Sarasvathy: opportunities are not only found, they can be made",
+      mini_zh:[
+        "Effectual reasoning 不是先有明確目標再找手段；而是從『我是誰、我知道什麼、我認識誰』出發，讓可能目標逐步浮現。",
+        "核心對比：causal reasoning 重預測與 expected return；effectuation 重 means-driven、affordable loss、partnerships、leveraging contingencies。"
+      ],
+      mini_en:[
+        "Effectual reasoning does not start with a fixed goal; it starts from who I am, what I know, and whom I know, letting goals emerge over time.",
+        "Core contrast: causal reasoning emphasizes prediction and expected return; effectuation emphasizes means-driven action, affordable loss, partnerships, and leveraging contingencies."
+      ],
+      bigQ_zh:"NASA Valve 機會，是『市場早就存在、只是佃看到了』，還是『佃透過互動把機會一步步做出來』？",
+      bigQ_en:"Was the NASA valve opportunity already “out there” waiting to be found, or was it gradually made through interaction and commitment?",
+      tasks_zh:[
+        "用 bird-in-hand 說明：佃當時真正可動用的 means 是哪些？",
+        "用 affordable loss 說明：他們承擔的是哪一種可承受風險，而不是哪一種最大報酬？"
+      ],
+      tasks_en:[
+        "Using bird-in-hand, identify the means Tsukuda could actually mobilize.",
+        "Using affordable loss, explain what risk they were willing to absorb rather than what maximum return they projected."
+      ]
+    },
+    {
+      key:"T2", mins:15,
+      title_zh:"理論2｜HBS：從 idea 到 opportunity，再到 business model",
+      title_en:"Theory 2 | HBS: from idea to opportunity to business model",
+      mini_zh:[
+        "HBS 的切法很清楚：idea 只是模糊想法；opportunity 則是可用商業模式去服務特定需求、吸引資源、並為利害關係人創造價值。",
+        "辨識機會之後，還要 shaping：界定 entry position、需要的資源能力、價值主張，以及哪些假設要用市場實驗去測。"
+      ],
+      mini_en:[
+        "The HBS distinction is clean: an idea is only a rough insight; an opportunity is an idea shaped into a business model that targets a need, attracts resources, and creates stakeholder value.",
+        "After recognizing an opportunity, entrepreneurs still need shaping: define an entry position, required capabilities and resources, the value proposition, and which assumptions need market tests."
+      ],
+      bigQ_zh:"在 Ep3–4，NASA Valve 還只是『技術想法』，還是已經接近『可被塑造的機會』？差別在哪裡？",
+      bigQ_en:"In Episodes 3–4, is the NASA valve still only a technical idea, or is it already approaching a shapeable opportunity? What makes the difference?",
+      tasks_zh:[
+        "把劇情拆成四格：need、solution、resources、stakeholders，各找一個證據。",
+        "判斷哪一項最不確定：客戶需求、製造可行性、夥伴承諾、還是獲利方式？"
+      ],
+      tasks_en:[
+        "Break the episode into four boxes—need, solution, resources, stakeholders—and find one piece of evidence for each.",
+        "Decide which uncertainty is greatest: customer need, manufacturing feasibility, partner commitment, or monetization."
+      ]
+    },
+    {
+      key:"T3", mins:20,
+      title_zh:"比較｜Sarasvathy / HBS 與 Porter 五力＋互補者，看到的是不同型態的機會",
+      title_en:"Comparison | Sarasvathy/HBS versus Porter Five Forces + complementors reveal different kinds of opportunities",
+      mini_zh:[
+        "Porter 式分析偏向外部結構：產業吸引力、競爭壓力、替代品、買賣方力量與互補者。它擅長回答『這個市場值不值得進』。",
+        "Effectuation/HBS 則更擅長回答：在高度不確定下，你手上這組 means 與互動承諾，能不能把一個模糊 idea 逐步塑造成機會。"
+      ],
+      mini_en:[
+        "Porter-style analysis focuses on external structure: industry attractiveness, rivalry, substitutes, buyer/supplier power, and complementors. It is strong at asking whether a market is worth entering.",
+        "Effectuation/HBS is stronger for asking whether, under uncertainty, your current means and stakeholder commitments can gradually shape a vague idea into a viable opportunity."
+      ],
+      bigQ_zh:"若只用五力＋互補者分析 NASA Valve，你會看見什麼？又會漏掉什麼？",
+      bigQ_en:"If you analyzed the NASA valve only through Five Forces + complementors, what would you see—and what would you miss?",
+      tasks_zh:[
+        "兩欄比較：左欄列出五力＋互補者會看到的 3 件事；右欄列出 effectuation/HBS 會看到的 3 件事。",
+        "回答一句：哪一套更適合『早期辨識』？哪一套更適合『後續擴張與防守』？"
+      ],
+      tasks_en:[
+        "Make a two-column comparison: three things Five Forces + complementors would reveal, and three things effectuation/HBS would reveal.",
+        "State in one sentence: which lens is better for early recognition, and which is better for later scaling and defense?"
+      ]
+    },
+    {
+      key:"C1", mins:25,
+      title_zh:"台灣短個案｜Gogoro：是選到好市場，還是把市場做出來？",
+      title_en:"Taiwan quick case | Gogoro: selecting an attractive market, or shaping one into existence?",
+      mini_zh:[
+        "個案摘要（1）：2011 年成立的 Gogoro 並不是先從『便宜電動機車』切入，而是把問題定義成城市移動、能源補給與使用者體驗的整體重構。換句話說，它看到的不是單一產品市場，而是一個尚未成形的系統性機會。",
+        "個案摘要（2）：其核心設計不是只有 scooter，而是 battery-swapping network、軟體、門市／維修體系、合作車廠與政府政策互動。這代表機會辨識不只是發現需求，而是要同時塑造互補者與採用條件。",
+        "個案摘要（3）：從 Porter 角度看，這個市場一開始其實不漂亮：基礎設施投資高、互補資產不足、需求不確定、既有燃油機車替代壓力強。但從 Sarasvathy/HBS 角度，Gogoro 的重點在於用既有技術能力、設計能力、合作承諾與試點市場，逐步把 idea 塑造成 opportunity。",
+        "個案摘要（4）：因此本案很適合問：Gogoro 的機會主要來自『看見更好的產業結構』，還是來自『主動 shaping 新市場』？而一旦市場被做出來，後續才進入 competition-based strategy：擴大站點密度、提高切換成本、強化品牌與平台控制。"
+      ],
+      mini_en:[
+        "Case summary (1): Founded in 2011, Gogoro did not begin by simply selling a cheaper electric scooter. It reframed the problem as an integrated redesign of urban mobility, energy replenishment, and user experience. The opportunity was not a single product niche, but a system-level market that did not yet fully exist.",
+        "Case summary (2): Its core design included not only the scooter, but also a battery-swapping network, software, service and retail systems, partner manufacturers, and interaction with public policy. Opportunity recognition here means not just finding demand, but shaping complementors and adoption conditions.",
+        "Case summary (3): From a Porter lens, the market initially looked unattractive: high infrastructure investment, weak complements, uncertain demand, and strong substitution from gasoline scooters. From a Sarasvathy/HBS lens, however, Gogoro used available means—technology, design capability, stakeholder commitments, and pilot markets—to shape an idea into an opportunity.",
+        "Case summary (4): This makes the case ideal for asking whether Gogoro’s opportunity came mainly from spotting a structurally attractive market or from actively shaping a new one. Once the market began to form, competition-based strategy became more relevant: expanding station density, increasing switching costs, and strengthening brand and platform control."
+      ],
+      bigQ_zh:"Gogoro 比較像 Porter 式的『選對產業』，還是 Sarasvathy／HBS 式的『先用手上的 means 把市場做出來』？",
+      bigQ_en:"Is Gogoro better understood as Porter-style market selection, or as Sarasvathy/HBS-style shaping of a market from available means?",
+      tasks_zh:[
+        "請小組先用列點回答：Gogoro 的 opportunity 至少包含哪 4 個要素（need、solution、complementors、business model）？",
+        "再判斷：若只用五力＋互補者分析，會不會低估這個機會？為什麼？",
+        "最後與 NASA Valve 比較：哪一個案例更依賴『技術價值先被看見』，哪一個更依賴『生態系與採用條件被塑造』？"
+      ],
+      tasks_en:[
+        "As a team, list at least four elements in Gogoro’s opportunity: need, solution, complementors, and business model.",
+        "Then judge whether Five Forces + complementors alone would underestimate the opportunity, and explain why.",
+        "Finally compare it with the NASA valve: which case relies more on technical value being recognized first, and which relies more on ecosystem shaping and adoption conditions?"
+      ]
+    },
+    {
+      key:"S1", mins:20,
+      title_zh:"收束｜把 memo 答完整：value-based 還是 competition-based？對長期可持續性有何影響？",
+      title_en:"Synthesis | Complete the memo answer: value-based or competition-based, and what follows for long-term sustainability?",
+      mini_zh:[
+        "較強的答案通常不是二選一，而是分階段：早期常先以 value creation 為主，後期才需要 competition-based 的保護與擴張邏輯。",
+        "長期可持續性取決於：價值是否可重複創造、是否能轉成可防守的位置、以及關鍵夥伴與互補者是否持續投入。"
+      ],
+      mini_en:[
+        "The stronger answer is often staged rather than binary: early on, value creation dominates; later, competition-based logic matters more for protection and scale.",
+        "Long-run sustainability depends on whether value can be repeatedly created, whether it can be converted into a defendable position, and whether key partners and complementors stay committed."
+      ],
+      bigQ_zh:"你的 memo 結論是：NASA Valve 機會的核心價值是什麼？它要如何從『好機會』變成『可持續策略』？",
+      bigQ_en:"What is your memo conclusion: what is the core value in the NASA valve opportunity, and how does it become a sustainable strategy rather than just a good opportunity?",
+      tasks_zh:[
+        "完成 Poll B：你認為最能解釋本案機會辨識的主要理論鏡頭是什麼？",
+        "用 3 句完成 memo：分類、證據、可持續性條件。"
+      ],
+      tasks_en:[
+        "Complete Poll B: which theory lens best explains opportunity recognition in this case?",
+        "Finish the memo in three sentences: classification, evidence, and sustainability condition."
+      ]
+    }
+  ];
+
+  /* ========= state & persistence (projection) ========= */
+  let state = { idx: 0 };
+  const polls = { A:{}, B:{} };
+  const PROJ_KEY = "ibs_w1_opp_projection_local";
+
+  function persistProjection(){
+    const data = { idx: state.idx, polls, showBilingual };
+    localStorage.setItem(PROJ_KEY, JSON.stringify(data));
+  }
+  function loadProjection(){
+    const raw = localStorage.getItem(PROJ_KEY);
+    if(!raw) return;
+    try{
+      const d = JSON.parse(raw);
+      if(Number.isFinite(d.idx)) state.idx = Math.max(0, Math.min(segments.length-1, d.idx));
+      if(d.polls){
+        polls.A = d.polls.A || {};
+        polls.B = d.polls.B || {};
+      }
+      if(typeof d.showBilingual==="boolean") showBilingual = d.showBilingual;
+    }catch(e){}
+  }
+
+  function pollToText(p){
+    const entries = Object.entries(p);
+    if(entries.length===0) return "（尚無 / none）";
+    entries.sort((a,b)=>b[1]-a[1]);
+    return entries.map(([k,v])=>`${k}:${v}`).join("  |  ");
+  }
+  function renderPolls(){
+    $("#pollA").textContent = pollToText(polls.A);
+    $("#pollB").textContent = pollToText(polls.B);
+  }
+
+  /* ========= render helpers ========= */
+  function biBlock(zhLines, enLines){
+    const zh = (zhLines||[]).map(x=>`<div class="zh">${x}</div>`).join("");
+    const en = (enLines||[]).map(x=>`<div class="en">${x}</div>`).join("");
+    return `<div class="bi">${zh}${showBilingual ? en : ""}</div>`;
+  }
+  function renderAgenda(){
+    const a = $("#agenda");
+    a.innerHTML = "";
+    segments.forEach((s, i)=>{
+      const div = document.createElement("div");
+      div.className = "agendaItem" + (i===state.idx ? " active" : "");
+      div.innerHTML = `
+        <div class="agendaTop">
+          <div class="name"><strong style="color:var(--ntu-blue); font-family:var(--mono)">${s.key}</strong> — ${s.title_zh}</div>
+          <div class="mins">${s.mins} min</div>
+        </div>
+        <div class="q">
+          ${s.bigQ_zh}
+          ${showBilingual ? `<div class="tiny" style="margin-top:6px">${s.bigQ_en}</div>` : ``}
+        </div>
+      `;
+      div.addEventListener("click", ()=> go(i));
+      a.appendChild(div);
+    });
+  }
+
+  function renderSegment(){
+    const s = segments[state.idx];
+
+    $("#segTag").innerHTML = `<strong>${s.key}</strong> Segment`;
+    $("#segTime").textContent = `${s.mins} min`;
+
+    $("#segTitle").innerHTML = `${s.title_zh}${showBilingual ? `<div class="tiny" style="margin-top:6px">${s.title_en}</div>` : ""}`;
+
+    // Mini lecture lines as "cards" to improve scanning
+    const mini = document.createElement("div");
+    mini.innerHTML = biBlock(s.mini_zh, s.mini_en);
+    const zhLines = (s.mini_zh||[]);
+    const enLines = (s.mini_en||[]);
+    let html = "";
+    for(let i=0; i<Math.max(zhLines.length, enLines.length); i++){
+      const zh = zhLines[i] || "";
+      const en = enLines[i] || "";
+      html += `
+        <div class="line bi compact">
+          <div class="zh">${zh}</div>
+          ${showBilingual && en ? `<div class="en">${en}</div>` : ``}
+        </div>
+      `;
+    }
+    $("#miniLecture").innerHTML = html;
+
+    $("#bigQ").innerHTML = `
+      <div class="bi compact">
+        <div class="zh">${s.bigQ_zh}</div>
+        ${showBilingual ? `<div class="en">${s.bigQ_en}</div>` : ``}
+      </div>
+    `;
+
+    const ul = $("#tasks");
+    ul.innerHTML = "";
+    (s.tasks_zh||[]).forEach((t, idx)=>{
+      const en = (s.tasks_en||[])[idx] || "";
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <div class="bi compact">
+          <div class="zh">${t}</div>
+          ${showBilingual && en ? `<div class="en">${en}</div>` : ``}
+        </div>
+      `;
+      ul.appendChild(li);
+    });
+
+    renderAgenda();
+    persistProjection();
+  }
+
+  function renderAll(){
+    renderPolls();
+    renderSegment();
+    refreshStudentLink();
+    // student buttons need bilingual refresh
+    initStudentUI(true);
+  }
+
+  function go(i){
+    state.idx = Math.max(0, Math.min(segments.length-1, i));
+    renderSegment();
+  }
+  function next(){ go(state.idx+1); toast("下一段 / Next"); }
+  function prev(){ go(state.idx-1); toast("上一段 / Prev"); }
+
+  $("#btnNext").addEventListener("click", next);
+  $("#btnPrev").addEventListener("click", prev);
+  $("#btnGoStart").addEventListener("click", ()=>{ go(0); toast("回到第一段 / Back to start"); });
+
+  /* ========= manual voting (projection only) ========= */
+  function localVote(poll, opt){
+    polls[poll][opt] = (polls[poll][opt] || 0) + 1;
+  }
+  $$("button[data-poll]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      localVote(btn.dataset.poll, btn.dataset.opt);
+      renderPolls();
+      persistProjection();
+    });
+  });
+
+  $("#btnResetPolls").addEventListener("click", ()=>{
+    polls.A = {}; polls.B = {};
+    renderPolls();
+    persistProjection();
+    toast("已重設投影端票數 / Reset");
+  });
+
+  /* ========= keyboard navigation (projection) ========= */
+  document.addEventListener("keydown", (e)=>{
+    if(e.target && ["INPUT","TEXTAREA","SELECT"].includes(e.target.tagName)) return;
+    if($("#studentMain").style.display==="block") return;
+    if(e.key==="ArrowRight") next();
+    if(e.key==="ArrowLeft") prev();
+  });
+
+  /* ========= student link ========= */
+  function buildStudentURL(){
+    const base = location.href.split("#")[0];
+    const url = new URL(base);
+    url.searchParams.set("view","student");
+    return url.toString();
+  }
+  function refreshStudentLink(){
+    $("#studentLinkBox").textContent = buildStudentURL();
+  }
+
+  /* ========= student worksheet (local-only) ========= */
+  const STUD_KEY = "ibs_w1_opp_student_local";
+  let student = { voteA:null, voteB:null, reply:"" };
+
+  function loadStudent(){
+    const raw = localStorage.getItem(STUD_KEY);
+    if(!raw) return;
+    try{
+      const d = JSON.parse(raw);
+      student.voteA = d.voteA || null;
+      student.voteB = d.voteB || null;
+      student.reply = d.reply || "";
+    }catch(e){}
+  }
+  function persistStudent(){
+    localStorage.setItem(STUD_KEY, JSON.stringify(student));
+  }
+  function setSelected(container, val){
+    Array.from(container.querySelectorAll(".voteBtn")).forEach(btn=>{
+      btn.classList.toggle("selected", btn.dataset.value === val);
+    });
+  }
+  function mkVoteBtn(labelZH, labelEN, hintZH, hintEN, value, onPick){
+    const b = document.createElement("button");
+    b.className = "voteBtn";
+    b.dataset.value = value;
+    b.innerHTML = `
+      <div class="bi compact">
+        <div class="zh"><strong>${labelZH}</strong></div>
+        ${showBilingual ? `<div class="en"><strong>${labelEN}</strong></div>` : ``}
+      </div>
+      <div class="hint">
+        <span class="zh">${hintZH}</span>
+        ${showBilingual ? `<span class="en" style="display:block;margin-top:4px">${hintEN}</span>` : ``}
+      </div>
+    `;
+    b.addEventListener("click", ()=> onPick(value));
+    return b;
+  }
+
+  function initStudentUI(refreshOnly=false){
+    const boxA = $("#studentPollA");
+    const boxB = $("#studentPollB");
+
+    // rebuild on refresh so bilingual toggle updates properly
+    boxA.innerHTML = "";
+    boxB.innerHTML = "";
+
+    const A = [
+      {
+        labelZH:"Value-based strategy",
+        labelEN:"Value-based strategy",
+        hintZH:"重點在創造新價值、解決真實需求、讓顧客或夥伴得到更高效益。",
+        hintEN:"Emphasizes creating new value, solving a real need, and delivering higher stakeholder benefit.",
+        value:"Value-based strategy"
+      },
+      {
+        labelZH:"Competition-based strategy",
+        labelEN:"Competition-based strategy",
+        hintZH:"重點在打敗既有對手、佔位、防守、提高對手成本。",
+        hintEN:"Emphasizes beating rivals, occupying position, defending, and raising rivals’ costs.",
+        value:"Competition-based strategy"
+      },
+      {
+        labelZH:"Hybrid / staged",
+        labelEN:"Hybrid / staged",
+        hintZH:"早期偏 value creation，後期再轉成 competition-based 的防守與擴張。",
+        hintEN:"Early stage centers on value creation, later stage shifts toward competitive defense and scale.",
+        value:"Hybrid / staged"
+      },
+      {
+        labelZH:"Not enough information",
+        labelEN:"Not enough information",
+        hintZH:"目前劇情證據還不足，無法做強判斷。",
+        hintEN:"Episode evidence is still too incomplete for a strong conclusion.",
+        value:"Not enough information"
+      },
+    ];
+
+    const B = [
+      {
+        labelZH:"Effectuation / means-driven",
+        labelEN:"Effectuation / means-driven",
+        hintZH:"從誰、知道什麼、認識誰出發；透過承諾與意外逐步做出機會。",
+        hintEN:"Starts from who we are, what we know, and whom we know; opportunities are made through commitments and contingencies.",
+        value:"Effectuation / means-driven"
+      },
+      {
+        labelZH:"HBS opportunity shaping",
+        labelEN:"HBS opportunity shaping",
+        hintZH:"重點在把想法塑造成 entry position、資源需求、價值主張與可驗證假設。",
+        hintEN:"Focuses on shaping an idea into an entry position, resource requirements, a value proposition, and testable assumptions.",
+        value:"HBS opportunity shaping"
+      },
+      {
+        labelZH:"Five Forces + complementors",
+        labelEN:"Five Forces + complementors",
+        hintZH:"重點在產業結構、競爭壓力與互補者是否讓市場夠有吸引力。",
+        hintEN:"Focuses on industry structure, competitive pressure, and whether complementors make the market attractive.",
+        value:"Five Forces + complementors"
+      },
+      {
+        labelZH:"Market imperfections / value creation",
+        labelEN:"Market imperfections / value creation",
+        hintZH:"重點在市場缺陷與 frictions 是否讓佃有機會創造可被抓住的價值。",
+        hintEN:"Focuses on whether market frictions and imperfections open a path for value creation and capture.",
+        value:"Market imperfections / value creation"
+      },
+    ];
+
+    A.forEach(row=>{
+      boxA.appendChild(mkVoteBtn(row.labelZH,row.labelEN,row.hintZH,row.hintEN,row.value,(val)=>{
+        student.voteA = val;
+        persistStudent();
+        setSelected(boxA, val);
+        $("#studentStatus").textContent = "已保存（僅本機）/ Saved locally";
+        toast("已選取 / Selected");
+      }));
+    });
+
+    B.forEach(row=>{
+      boxB.appendChild(mkVoteBtn(row.labelZH,row.labelEN,row.hintZH,row.hintEN,row.value,(val)=>{
+        student.voteB = val;
+        persistStudent();
+        setSelected(boxB, val);
+        $("#studentStatus").textContent = "已保存（僅本機）/ Saved locally";
+        toast("已選取 / Selected");
+      }));
+    });
+
+    // restore selection highlights
+    setSelected(boxA, student.voteA);
+    setSelected(boxB, student.voteB);
+
+    if(!refreshOnly){
+      $("#studentReply").addEventListener("input", ()=>{
+        student.reply = $("#studentReply").value;
+        persistStudent();
+      });
+    }
+  }
+
+  $("#btnSaveStudent").addEventListener("click", ()=>{
+    student.reply = $("#studentReply").value;
+    persistStudent();
+    $("#studentStatus").textContent = "已保存到本機 ✅ / Saved locally ✅";
+    toast("已保存 / Saved");
+  });
+
+  $("#btnClearStudent").addEventListener("click", ()=>{
+    student = { voteA:null, voteB:null, reply:"" };
+    persistStudent();
+    $("#studentReply").value = "";
+    initStudentUI(true);
+    $("#studentStatus").textContent = "已清空（僅本機）/ Cleared locally";
+    toast("已清空 / Cleared");
+  });
+
+  $("#btnCopy").addEventListener("click", async ()=>{
+    const txt =
+`[IBS W3 Opportunity Recognition Student Notes]
+Poll A: ${student.voteA || "(none)"}
+Poll B: ${student.voteB || "(none)"}
+
+Notes:
+${student.reply || ""}`;
+    try{
+      await navigator.clipboard.writeText(txt);
+      toast("已複製 / Copied");
+    }catch(e){
+      const ta = document.createElement("textarea");
+      ta.value = txt;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      ta.remove();
+      toast("已複製 / Copied");
+    }
+    $("#studentStatus").textContent = "已複製到剪貼簿 / Copied to clipboard";
+  });
+
+  function showStudent(){
+    $("#projectionMain").style.display="none";
+    $("#studentMain").style.display="block";
+    window.scrollTo(0,0);
+    $("#studentStatus").textContent = "你的答案只會保存在本機 / Your work stays on your device";
+  }
+  function showProjection(){
+    $("#studentMain").style.display="none";
+    $("#projectionMain").style.display="block";
+    window.scrollTo(0,0);
+  }
+  $("#btnOpenStudent").addEventListener("click", showStudent);
+  $("#btnBackProjection").addEventListener("click", showProjection);
+
+  /* ========= init ========= */
+  loadProjection();
+  loadStudent();
+
+  setLangUI();
+  $("#studentReply").value = student.reply || "";
+
+  renderPolls();
+  renderSegment();
+  refreshStudentLink();
+  initStudentUI(true);
+
+  // URL param view=student
+  const params = new URLSearchParams(location.search);
+  if(params.get("view")==="student"){
+    showStudent();
+  }else{
+    showProjection();
+  }
+</script>
+</body>
+</html>
